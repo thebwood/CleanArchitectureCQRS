@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureCQRS.Domain.Entities
+namespace CleanArchitectureCQRS.Domain.Addresses
 {
-    internal class Address
+    public class Address
     {
+        public Address()
+        {
+        }
+
         public Guid Id { get; set; }
         public string Street { get; set; }
         public string Number { get; set; }
@@ -16,5 +20,6 @@ namespace CleanArchitectureCQRS.Domain.Entities
         public string PostalCode { get; set; }
         public string Country { get; set; }
         public string Phone { get; set; }
+
     }
 }

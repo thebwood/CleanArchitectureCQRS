@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Addresses\Get\" />
-    <Folder Include="Data\" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.2.0" />
+    <ProjectReference Include="..\CleanArchitectureCQRS.Domain\CleanArchitectureCQRS.Domain.csproj" />
   </ItemGroup>
 
 </Project>
