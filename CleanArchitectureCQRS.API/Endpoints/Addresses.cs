@@ -1,4 +1,4 @@
-﻿using CleanArchitectureCQRS.Application.Addresses.Create;
+﻿using CleanArchitectureCQRS.Application.Addresses.Commands.Create;
 using MediatR;
 namespace CleanArchitectureCQRS.API.Endpoints
 {

@@ -3,7 +3,7 @@ using CleanArchitectureCQRS.Domain.Addresses;
 using CleanArchitectureCQRS.Domain.Repositories;
 using MediatR;
 
-namespace CleanArchitectureCQRS.Application.Addresses.Create
+namespace CleanArchitectureCQRS.Application.Addresses.Commands.Create
 {
     internal class CreateAddressCommandHandler : IRequestHandler<CreateAddressCommand>
     {
@@ -21,7 +21,7 @@ namespace CleanArchitectureCQRS.Application.Addresses.Create
             {
                 Id = Guid.NewGuid(),
                 Street = request.Street,
-                Number = request.Number,
+                PhoneNumber = request.PhoneNumber,
                 City = request.City,
                 State = request.State,
                 PostalCode = request.PostalCode,
