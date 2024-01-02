@@ -1,26 +1,25 @@
 ﻿
 using CleanArchitectureCQRS.Domain.Abstractions;
+using CleanArchitectureCQRS.Domain.Common.ValueObjects;
 using CleanArchitectureCQRS.Domain.Users.Events;
 
 namespace CleanArchitectureCQRS.Domain.Users
 {
     public sealed class User : Entity
     {
-        public User(Guid id, FirstName firstName, LastName lastName, Email email) 
+        public User(Guid id, Name name, Email email)
             : base(id)
         {
-            FirstName = firstName;
-            LastName = lastName;
+            Name = Name;
             Email = email;
         }
 
-        public FirstName FirstName { get; private set; }
-        public LastName LastName { get; private set; }
+        public Name Name { get; private set; }
         public Email Email { get; private set; }
 
-        public static User Create(FirstName firstName, LastName lastName, Email email)
+        public static User Create(Name name, Email email)
         {
-            var user = new User(Guid.NewGuid(), firstName, lastName, email);
+            var user = new User(Guid.NewGuid(), name, email);
             user.AddDomainEvent(new UserCreatedDomainEvent(user.Id));
             return user;
         }

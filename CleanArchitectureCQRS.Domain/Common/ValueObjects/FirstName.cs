@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureCQRS.Domain.RefData
+namespace CleanArchitectureCQRS.Domain.Common.ValueObjects
 {
-    internal class Country
-    {
-    }
+    public record FirstName(string Value);
 }

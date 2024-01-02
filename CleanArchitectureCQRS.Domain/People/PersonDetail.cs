@@ -1,10 +1,11 @@
-﻿namespace CleanArchitectureCQRS.Domain.People
+﻿using CleanArchitectureCQRS.Domain.Common.ValueObjects;
+
+namespace CleanArchitectureCQRS.Domain.People
 {
     public record PersonDetail
     (
-        FirstName FirstName,
-        LastName LastName,
-        DateTime DateOfBirth
+        Name Name,
+        BirthDate DateOfBirth
     );
 
 }

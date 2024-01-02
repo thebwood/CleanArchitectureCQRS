@@ -1,9 +1,10 @@
 ﻿using CleanArchitectureCQRS.Domain.Abstractions;
-using CleanArchitectureCQRS.Domain.PhoneNumbers;
+using CleanArchitectureCQRS.Domain.Addresses;
+using CleanArchitectureCQRS.Domain.PhoneNumberAggregate;
 
-namespace CleanArchitectureCQRS.Domain.Addresses
+namespace CleanArchitectureCQRS.Domain.AddressAggregate
 {
-    public sealed class Address : Entity
+    public sealed class Address : AggregateRoot
     {
         public Address(
             Guid Id,
