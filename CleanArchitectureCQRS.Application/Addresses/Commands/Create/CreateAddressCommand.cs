@@ -1,9 +1,9 @@
-﻿using CleanArchitectureCQRS.Domain.Addresses;
+﻿using CleanArchitectureCQRS.Domain.Abstractions.Repositories;
 using MediatR;
 
 namespace CleanArchitectureCQRS.Application.Addresses.Commands.Create
 {
-    public class CreateAddressCommand : IRequestHandler<CreateAddressCommand>
+    public class CreateAddressCommand : IRequestHandler<CreateAddressCommandHandler>
     {
         IAddressRepository _addressRepository;
 

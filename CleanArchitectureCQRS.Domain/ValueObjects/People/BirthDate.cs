@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureCQRS.Domain.Common.ValueObjects
+namespace CleanArchitectureCQRS.Domain.ValueObjects.People
 {
     public class BirthDate : ValueObject
     {

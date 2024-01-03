@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureCQRS.Domain.Services
+namespace CleanArchitectureCQRS.Domain.ValueObjects.People
 {
-    public class AddrressService
-    {
-    }
+    public record FirstName(string Value);
 }

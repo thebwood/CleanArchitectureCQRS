@@ -1,12 +1,13 @@
 ﻿using CleanArchitectureCQRS.Domain.Abstractions;
 using CleanArchitectureCQRS.Domain.PhoneNumbers;
+using CleanArchitectureCQRS.Domain.ValueObjects.PhoneNumbers;
 
 namespace CleanArchitectureCQRS.Domain.PhoneNumberAggregate
 {
-    public sealed class PhoneNumber : AggregateRoot
+    public sealed class PhoneNumber : AggregateRoot<PhoneNumberId>
     {
 
-        public PhoneNumber(Guid id, CountryCode countryCode, string number, string type)
+        public PhoneNumber(PhoneNumberId id, CountryCode countryCode, string number, string type)
             : base(id)
         {
             CountryCode = countryCode;

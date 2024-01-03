@@ -1,20 +1,23 @@
-﻿using System;
+﻿using CleanArchitectureCQRS.Domain.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CleanArchitectureCQRS.Domain.Abstractions
 {
-    public abstract class Entity
+    public abstract class Entity<TEntityId> : IEntity
     {
         private readonly List<IDomainEvent> _domainEvents = new();
-        protected Entity(Guid id) { 
+        protected Entity(TEntityId id)
+        {
             Id = id;
         }
-        public Guid Id { get; init; }
+        public TEntityId Id { get; init; }
 
-        public IReadOnlyList<IDomainEvent> GetDomainEvents => _domainEvents;
+        public IReadOnlyList<IDomainEvent> GetDomainEvents() => _domainEvents;
         public void AddDomainEvent(IDomainEvent domainEvent) => _domainEvents.Add(domainEvent);
         public void RemoveDomainEvent(IDomainEvent domainEvent) => _domainEvents.Remove(domainEvent);
 

@@ -1,13 +1,13 @@
 ﻿using CleanArchitectureCQRS.Domain.Abstractions;
-using CleanArchitectureCQRS.Domain.Addresses;
 using CleanArchitectureCQRS.Domain.PhoneNumberAggregate;
+using CleanArchitectureCQRS.Domain.ValueObjects.Addresses;
 
 namespace CleanArchitectureCQRS.Domain.AddressAggregate
 {
-    public sealed class Address : AggregateRoot
+    public sealed class Address : AggregateRoot<AddressId>
     {
         public Address(
-            Guid Id,
+            AddressId Id,
             AddressDetail addressDetail,
             string country,
             PhoneNumber phone)

@@ -43,7 +43,7 @@ namespace CleanArchitectureCQRS.Domain.Abstractions
 public class Result<TValue> : Result
 {
     private readonly TValue? _value;
-    protected internal Result(bool isSuccess, Error error, TValue value)
+    protected internal Result(bool isSuccess, Error error, TValue? value)
         : base(isSuccess, error)
     {
         _value = value;

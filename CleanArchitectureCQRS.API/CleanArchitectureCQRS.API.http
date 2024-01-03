@@ -1,4 +1,4 @@
-@CleanArchitectureCQRS.API_HostAddress = http://localhost:5112
+@CleanArchitectureCQRS.API_HostAddress = http://localhost:5012
 
 GET {{CleanArchitectureCQRS.API_HostAddress}}/weatherforecast/
 Accept: application/json

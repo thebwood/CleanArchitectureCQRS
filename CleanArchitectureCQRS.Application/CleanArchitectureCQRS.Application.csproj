@@ -15,4 +15,8 @@
     <ProjectReference Include="..\CleanArchitectureCQRS.Domain\CleanArchitectureCQRS.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\Commands\LoginUser\" />
+  </ItemGroup>
+
 </Project>

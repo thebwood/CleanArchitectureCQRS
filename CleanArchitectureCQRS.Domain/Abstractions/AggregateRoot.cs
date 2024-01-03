@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CleanArchitectureCQRS.Domain.Abstractions
+﻿namespace CleanArchitectureCQRS.Domain.Abstractions
 {
-    public abstract class AggregateRoot : Entity
+    public abstract class AggregateRoot<TEntityId> : Entity<TEntityId>
     {
-        protected AggregateRoot(Guid id) : base(id)
+        protected AggregateRoot(TEntityId id) : base(id)
         {
         }
     }

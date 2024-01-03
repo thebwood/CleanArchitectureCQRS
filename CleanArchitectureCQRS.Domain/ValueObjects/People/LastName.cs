@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureCQRS.Domain.People
+namespace CleanArchitectureCQRS.Domain.ValueObjects.People
 {
     public record LastName(string Value);
 }

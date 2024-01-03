@@ -1,4 +1,4 @@
-﻿namespace CleanArchitectureCQRS.Domain.Addresses
+﻿namespace CleanArchitectureCQRS.Domain.ValueObjects.Addresses
 {
     public record AddressDetail(
         string Street,

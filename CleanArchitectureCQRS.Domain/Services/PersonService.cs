@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchitectureCQRS.Domain.Services
 {
-    internal class PersonService
+    public class PersonService
     {
     }
 }

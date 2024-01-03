@@ -1,4 +1,4 @@
-﻿using CleanArchitectureCQRS.Domain.Common.ValueObjects;
+﻿using CleanArchitectureCQRS.Domain.ValueObjects.People;
 
 namespace CleanArchitectureCQRS.Domain.People
 {

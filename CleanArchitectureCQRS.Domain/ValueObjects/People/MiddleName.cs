@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureCQRS.Domain.Common.ValueObjects
+namespace CleanArchitectureCQRS.Domain.ValueObjects.People
 {
-    public record FirstName(string Value);
+    public record MiddleName(string Value);
 }
