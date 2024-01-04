@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+using CleanArchitectureCQRS.Application.Exceptions;
 
 namespace CleanArchitectureCQRS.API.Middlewares
 {

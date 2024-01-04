@@ -1,6 +1,9 @@
 ﻿using CleanArchitectureCQRS.Domain.Abstractions;
+using CleanArchitectureCQRS.Domain.Addresses.Events;
 using CleanArchitectureCQRS.Domain.PhoneNumberAggregate;
 using CleanArchitectureCQRS.Domain.ValueObjects.Addresses;
+using CleanArchitectureCQRS.Domain.ValueObjects.Users;
+using System.Diagnostics.Metrics;
 
 namespace CleanArchitectureCQRS.Domain.AddressAggregate
 {
@@ -9,18 +12,27 @@ namespace CleanArchitectureCQRS.Domain.AddressAggregate
         public Address(
             AddressId Id,
             AddressDetail addressDetail,
-            string country,
             PhoneNumber phone)
             : base(Id)
         {
             AddressDetail = addressDetail;
-            Country = country;
             PhoneNumber = phone;
         }
 
         public AddressDetail AddressDetail { get; set; }
-        public string Country { get; set; }
         public PhoneNumber PhoneNumber { get; set; }
+
+        public static Address Create(AddressDetail addressDetail, PhoneNumber phone)
+        {
+
+            Address address = new Address(AddressId.New(), addressDetail, phone);
+
+            address.AddDomainEvent(new AddressCreateDomainEvent(address.Id));
+
+            return address;
+        }
+
+
 
     }
 }

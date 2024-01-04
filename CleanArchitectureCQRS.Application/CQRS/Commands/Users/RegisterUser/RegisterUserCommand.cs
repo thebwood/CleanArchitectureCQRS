@@ -1,6 +1,6 @@
 ﻿using CleanArchitectureCQRS.Application.Abstractions.Messaging;
 
-namespace CleanArchitectureCQRS.Application.Users.Commands.RegisterUser
+namespace CleanArchitectureCQRS.Application.CQRS.Commands.Users.RegisterUser
 {
     public sealed record RegisterUserCommand(
             string Email,

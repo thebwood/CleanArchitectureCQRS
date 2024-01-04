@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Users\Commands\LoginUser\" />
+    <Folder Include="CQRS\Queries\" />
   </ItemGroup>
 
 </Project>

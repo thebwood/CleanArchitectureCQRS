@@ -1,4 +1,7 @@
-﻿using MediatR;
+﻿using CleanArchitectureCQRS.API.DTOs.Users;
+using CleanArchitectureCQRS.Application.CQRS.Commands.Users.LoginUser;
+using CleanArchitectureCQRS.Application.CQRS.Commands.Users.RegisterUser;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,10 +43,10 @@ namespace CleanArchitectureCQRS.API.Controllers.Users
         [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login(
-            LogInUserRequest request,
+            LoginUserRequest request,
             CancellationToken cancellationToken)
         {
-            var command = new LogInUserCommand(request.Email, request.Password);
+            var command = new LoginUserCommand(request.Email, request.Password);
 
             var result = await _sender.Send(command, cancellationToken);
 

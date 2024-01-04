@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureCQRS.Application.Addresses.Queries
+namespace CleanArchitectureCQRS.Infrastructure
 {
-    internal class GetAddressQueryHandler
+    internal class DependencyInjection
     {
     }
 }
